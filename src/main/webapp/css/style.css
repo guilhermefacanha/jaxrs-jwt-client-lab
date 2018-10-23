@@ -6,7 +6,7 @@ h3{
 	margin-left: 50px;
 }
 .form-style-9 {
-	max-width: 450px;
+	max-width: 80%;
 	background: #FAFAFA;
 	padding: 30px;
 	margin-left: 50px;
@@ -115,7 +115,7 @@ li:last-child {
 
 li a {
 	text-decoration: none;
-	color: #ccc;
+	color: #555753;
 	font: 25px/1 Helvetica, Verdana, sans-serif;
 	text-transform: uppercase;
 	-webkit-transition: all 0.5s ease;
@@ -126,12 +126,17 @@ li a {
 }
 
 li a:hover {
-	color: #666;
+	color: #babdb6;
 }
 
 li.active a {
 	font-weight: bold;
 	color: #333;
+}
+
+.code{
+	background-color: #efe9ca !important;
+	font-weight: bold;
 }
 
 .info, .success, .warning, .error, .validation {

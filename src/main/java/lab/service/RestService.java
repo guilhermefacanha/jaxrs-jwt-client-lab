@@ -15,12 +15,29 @@ import lab.util.ChaveValor;
 
 public class RestService {
 	
-	public static final String URL_BASE = "http://localhost:8080/restjwt/rest/";
+	public static String URL_BASE = "http://localhost:8080/restjwt/rest/";
+	
+	public static void setUrl(String url) {
+		RestService.URL_BASE = url;
+	}
 	
 	public static Response getRestResponse(String url) {
 		return getRestGetResponse(url, null);
 	}
 
+	public static Response getRestPostResponse(String url, Object object) {
+		Client client = ClientBuilder.newClient();
+		WebTarget target = client.target(url);
+		
+		Invocation.Builder invocationBuilder = target.request();
+		// invocationBuilder.header("some-header", "true");
+		
+		Response response = null;
+		
+		response = invocationBuilder.header("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8").post(Entity.json(object));
+		
+		return response;
+	}
 	public static Response getRestPostResponse(String url, List<ChaveValor<String, String>> params) {
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(url);

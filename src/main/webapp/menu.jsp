@@ -14,10 +14,10 @@
 			<a href="login.jsp">Login</a>
 		</li>
 		<li>
-			<a href="usuarios.jsp">Usuários</a>
+			<a href="rest_get.jsp">Rest Get Test</a>
 		</li>
 		<li>
-			<a href="usuarios_new.jsp">Novo Usuário</a>
+			<a href="rest_post.jsp">Rest Post Test</a>
 		</li>
 	</ul>
 	</nav>
